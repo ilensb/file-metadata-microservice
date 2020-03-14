@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 })
 
-app.post("/fileanalyse", upload.any(), function (req, res) {
+app.post("/api/fileanalyse", upload.any(), function (req, res) {
   var file = req.files[0]
   console.log(file)
   var result = {
